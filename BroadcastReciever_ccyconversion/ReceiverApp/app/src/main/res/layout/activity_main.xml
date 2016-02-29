@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.neelam.app4.MainActivity">
+
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currency Conversion Exchange"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/font_medium"
+        android:textColor="#64aaee"
+        android:paddingBottom="30dip"
+        android:textColorHighlight="#346b6d" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/dark_blue"
+            android:padding="2dip"
+            android:id="@+id/amount_tag"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/coverter_amt"
+            android:layout_toStartOf="@+id/coverter_amt"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Converted Amount"
+            android:id="@+id/coverter_amt"
+            android:background="@drawable/rounded"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="86dp"
+            android:layout_marginEnd="86dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/amount_tag" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currency"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/dark_blue"
+            android:padding="2dip"
+            android:id="@+id/ccy_tag"
+            android:layout_below="@+id/amount_tag"
+            android:layout_marginTop="27dp"
+            android:layout_alignLeft="@+id/amount_tag"
+            android:layout_alignStart="@+id/amount_tag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Currency Converted to"
+            android:id="@+id/ccy_choice"
+            android:background="@drawable/rounded"
+            android:layout_alignBottom="@+id/ccy_tag"
+            android:layout_alignLeft="@+id/coverter_amt"
+            android:layout_alignStart="@+id/coverter_amt"
+            android:layout_alignTop="@+id/ccy_tag" />
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:id="@+id/linearLayout"
+        android:weightSum="1"
+        android:padding="4dip">
+
+        <Button
+            android:id="@+id/btn_Cancel"
+            android:layout_height="26dp"
+            android:layout_width="wrap_content"
+            android:text="Cancel"
+            android:textSize="20dp"
+            android:onClick="finishActivity"
+            android:textColor="#FFFFFF"
+            android:background="@color/light_red"
+            android:layout_marginTop="200dp"
+            android:shadowColor="#4d4c4c" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
