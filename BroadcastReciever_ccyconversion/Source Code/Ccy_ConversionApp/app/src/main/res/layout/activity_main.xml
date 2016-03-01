@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.neelam.app3.MainActivity">
+
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/font_large"
+        android:textColor="@color/dark_blue"
+        android:paddingBottom="30dip"
+        />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            >
+        <TextView
+            android:id="@+id/amount_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount($)"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/dark_blue"
+            android:padding="2dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <EditText
+            android:id="@+id/amount"
+            android:background="@drawable/rounded_editbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="0"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/spinner"
+            android:layout_alignStart="@+id/spinner"
+            android:layout_alignBottom="@+id/amount_tag" />
+
+        <Button
+            android:id="@+id/btn_convert_amt"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Convert"
+            android:textSize="@dimen/font_medium"
+            android:textColor="#FFFFFF"
+            android:background="@color/light_green"
+            android:hapticFeedbackEnabled="false"
+            android:shadowColor="#fefbfb"
+            android:padding="2dip"
+            android:onClick="convert"
+            android:layout_alignTop="@+id/btn_cancel"
+            android:layout_alignLeft="@+id/amount_tag"
+            android:layout_alignStart="@+id/amount_tag" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Cancel"
+            android:textSize="@dimen/font_medium"
+            android:textColor="#FFFFFF"
+            android:background="@color/light_red"
+            android:hapticFeedbackEnabled="false"
+            android:shadowColor="#fefbfb"
+            android:padding="2dip"
+            android:onClick="finishActivity"
+            android:layout_marginLeft="54dp"
+            android:layout_marginStart="54dp"
+            android:layout_below="@+id/spinner"
+            android:layout_toRightOf="@+id/btn_convert_amt"
+            android:layout_toEndOf="@+id/btn_convert_amt"
+            android:layout_marginTop="150dp" />
+
+
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert to"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/dark_blue"
+            android:padding="2dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <!--Spinners/dropdown list -->
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:spinnerMode="dropdown"
+            android:dropDownSelector="#7fddee"
+            android:dropDownWidth="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/btn_cancel"
+            android:layout_alignStart="@+id/btn_cancel" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textColor="@color/dark_blue"
+        android:padding="2dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
